@@ -27,7 +27,7 @@ spec:
                   name: mongodb-restaurant-deploy
                   key: mongodb-root-password
             - name: MONGODB_URI
-              value: "mongodb://root:$(MONGODB_ROOT_PASSWORD)@mongodb-restaurant-deploy.default.svc.cluster.local:27017/restaurant?authSource=admin"
+              value: "mongodb://root:$(MONGODB_ROOT_PASSWORD)@mongodb-restaurant-deploy.default.svc.cluster.local:27017"
 ---
 apiVersion: v1
 kind: Service

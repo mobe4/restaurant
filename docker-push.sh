@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DOCKER_IMAGE_NAME="resturant-api"
-VERSION="1.0.0"
+VERSION="2.0.0"
 
 docker build -t $DOCKER_IMAGE_NAME:$VERSION .
 docker tag $DOCKER_IMAGE_NAME:$VERSION muse098/$DOCKER_IMAGE_NAME:$VERSION
