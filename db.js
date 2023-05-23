@@ -1,6 +1,8 @@
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb://localhost:27017';
+// const uri = 'mongodb://localhost:27017';
+const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function connect() {
@@ -11,5 +13,10 @@ async function connect() {
         console.error(err);
     }
 }
+
+
+
+
+
 
 module.exports = { client, connect };
